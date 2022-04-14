@@ -1,6 +1,6 @@
 {
-  "name": "react-awesome-query-builder",
-  "version": "5.2.0",
+  "name": "comet-awesome-query-builder",
+  "version": "0.0.1",
   "description": "User-friendly query builder for React. Demo: https://ukrbublik.github.io/react-awesome-query-builder",
   "keywords": [
     "query-builder",
@@ -65,15 +65,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/ukrbublik/react-awesome-query-builder.git"
+    "url": "https://github.com/caleb-kaiser/react-awesome-query-builder.git"
   },
-  "author": "Denis Oblogin <ukrbublik@gmail.com> (https://github.com/ukrbublik)",
+  "author": "Caleb Kaiser <caleb@comet.ml>",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/ukrbublik/react-awesome-query-builder/issues"
-  },
-  "homepage": "https://github.com/ukrbublik/react-awesome-query-builder",
-  "funding": "https://opencollective.com/react-awesome-query-builder",
   "engines": {
     "node": ">=12.13",
     "npm": ">=6"
