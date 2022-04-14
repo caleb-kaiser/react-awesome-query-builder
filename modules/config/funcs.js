@@ -10,7 +10,7 @@ const NOW = {
     now: () => new Date(),
   },
   spelFunc: "new java.util.Date()",
-  sqlFormatFunc: () => "NOW()",
+  sqlFormatFunc: () => "date('now')",
   mongoFormatFunc: () => new Date(),
   formatFunc: () => "NOW",
 };
@@ -39,7 +39,7 @@ const RELATIVE_DATETIME = {
   },
   // MySQL
   //todo: other SQL dialects?
-  sqlFormatFunc: ({date, op, val, dim}) => `DATE_ADD(${date}, INTERVAL ${parseInt(val) * (op == "minus" ? -1 : +1)} ${dim.replace(/^'|'$/g, "")})`,
+  sqlFormatFunc: ({date, op, val, dim}) => `datetime(${date}, '${parseInt(val) * (op == "'minus'" ? -1 : +1)} ${dim.replace(/^'|'$/g, "")}s')`,
   mongoFormatFunc: null, //todo: support?
   //todo: spel
   formatFunc: ({date, op, val, dim}) => (!val ? date : `${date} ${op == "minus" ? "-" : "+"} ${val} ${dim}`),
@@ -88,8 +88,10 @@ const RELATIVE_DATETIME = {
       },
       fieldSettings: {
         listValues: {
+          second: "second",
+          minute: "minute",
+          hour: "hour",
           day: "day",
-          week: "week",
           month: "month",
           year: "year",
         },
